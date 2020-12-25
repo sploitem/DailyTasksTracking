@@ -3,31 +3,31 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.IO;
 
 namespace DailyTasksTracking
 {
-    public partial class FormCapture : Form
+    public partial class TaskRecord : Form
     {
-        public FormCapture()
+        public TaskRecord()
         {
             InitializeComponent();
         }
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
-            using (var file = File.AppendText("db.csv"))
-            {
-                var dtNow = DateTime.Now;
-                var msg = dtNow.ToShortDateString() + "," + dtNow.ToShortTimeString() + "," + textBoxTaskText.Text;
-                //var bytes = Encoding.UTF8.GetBytes(msg);
-                //file.Write(bytes, 0, bytes.Length);
-                file.WriteLine(msg);
-            }
+            //using (var file = File.AppendAllText("db.csv", ,))
+            //{
+            var dtNow = DateTime.Now;
+            var msg = dtNow.ToShortDateString() + ";" + dtNow.ToShortTimeString() + ";" + textBoxTaskDescription.Text;
+            var list = new List<string>();
+            list.Add(msg);
+            File.AppendAllLines("db.csv", list, Encoding.GetEncoding(1251));//file.WriteLine(msg, Encoding.GetEncoding(1251));
+            //}
             this.Close();
         }
 

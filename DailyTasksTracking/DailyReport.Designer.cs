@@ -1,7 +1,7 @@
 ﻿
 namespace DailyTasksTracking
 {
-    partial class FormDailyReport
+    partial class DailyReport
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace DailyTasksTracking
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDailyReport));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DailyReport));
             this.dataGridViewReport = new System.Windows.Forms.DataGridView();
             this.buttonExport = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewReport)).BeginInit();
@@ -37,36 +37,25 @@ namespace DailyTasksTracking
             // 
             // dataGridViewReport
             // 
-            this.dataGridViewReport.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.dataGridViewReport, "dataGridViewReport");
             this.dataGridViewReport.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridViewReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewReport.Location = new System.Drawing.Point(12, 12);
             this.dataGridViewReport.Name = "dataGridViewReport";
-            this.dataGridViewReport.Size = new System.Drawing.Size(776, 381);
-            this.dataGridViewReport.TabIndex = 0;
             // 
             // buttonExport
             // 
-            this.buttonExport.Location = new System.Drawing.Point(13, 415);
+            resources.ApplyResources(this.buttonExport, "buttonExport");
             this.buttonExport.Name = "buttonExport";
-            this.buttonExport.Size = new System.Drawing.Size(75, 23);
-            this.buttonExport.TabIndex = 1;
-            this.buttonExport.Text = "Экспорт";
             this.buttonExport.UseVisualStyleBackColor = true;
             this.buttonExport.Click += new System.EventHandler(this.buttonExport_Click);
             // 
-            // FormDailyReport
+            // DailyReport
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.buttonExport);
             this.Controls.Add(this.dataGridViewReport);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "FormDailyReport";
-            this.Text = "Отчет за ";
+            this.Name = "DailyReport";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewReport)).EndInit();
             this.ResumeLayout(false);
 
