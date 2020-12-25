@@ -10,7 +10,7 @@ namespace DailyTasksTracking
     {
         static Timer timer;
         static bool formIsShowing;
-        static FormCapture form;
+        static TaskRecord form;
         static public int timerInterval;
 
         const int SECOND = 1000;
@@ -78,7 +78,7 @@ namespace DailyTasksTracking
         {
             if (formIsShowing == false)
             {
-                form = new FormCapture();
+                form = new TaskRecord();
                 form.FormClosed += Form_FormClosed;
                 form.Text = form.Text + " " + DateTime.Now.ToShortTimeString();
                 form.TopLevel = true;
@@ -89,7 +89,7 @@ namespace DailyTasksTracking
 
         private static void ShowReportForm(object sender, EventArgs e)
         {
-            var form = new FormDailyReport();
+            var form = new DailyReport();
             form.Text = form.Text + " " + DateTime.Now.ToShortDateString();
             form.Show();
         }

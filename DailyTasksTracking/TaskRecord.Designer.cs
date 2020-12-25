@@ -1,7 +1,7 @@
 ﻿
 namespace DailyTasksTracking
 {
-    partial class FormCapture
+    partial class TaskRecord
     {
         /// <summary>
         /// Required designer variable.
@@ -29,52 +29,52 @@ namespace DailyTasksTracking
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCapture));
-            this.textBoxTaskText = new System.Windows.Forms.TextBox();
+            this.textBoxTaskDescription = new System.Windows.Forms.TextBox();
             this.buttonSave = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBoxTaskText
+            // textBoxTaskDescription
             // 
-            this.textBoxTaskText.Location = new System.Drawing.Point(12, 12);
-            this.textBoxTaskText.Multiline = true;
-            this.textBoxTaskText.Name = "textBoxTaskText";
-            this.textBoxTaskText.Size = new System.Drawing.Size(267, 245);
-            this.textBoxTaskText.TabIndex = 0;
+            this.textBoxTaskDescription.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxTaskDescription.Location = new System.Drawing.Point(13, 13);
+            this.textBoxTaskDescription.Multiline = true;
+            this.textBoxTaskDescription.Name = "textBoxTaskDescription";
+            this.textBoxTaskDescription.Size = new System.Drawing.Size(344, 324);
+            this.textBoxTaskDescription.TabIndex = 0;
             // 
             // buttonSave
             // 
-            this.buttonSave.Location = new System.Drawing.Point(27, 292);
+            this.buttonSave.Location = new System.Drawing.Point(13, 349);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(75, 23);
             this.buttonSave.TabIndex = 1;
-            this.buttonSave.Text = "Сохранить";
+            this.buttonSave.Text = "Save";
             this.buttonSave.UseVisualStyleBackColor = true;
             this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
             // 
             // buttonCancel
             // 
-            this.buttonCancel.Location = new System.Drawing.Point(154, 292);
+            this.buttonCancel.Location = new System.Drawing.Point(107, 349);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(75, 23);
             this.buttonCancel.TabIndex = 2;
-            this.buttonCancel.Text = "Отмена";
+            this.buttonCancel.Text = "Cancel";
             this.buttonCancel.UseVisualStyleBackColor = true;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
-            // FormCapture
+            // TaskRecord
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(292, 343);
+            this.ClientSize = new System.Drawing.Size(369, 384);
             this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.buttonSave);
-            this.Controls.Add(this.textBoxTaskText);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "FormCapture";
-            this.Text = "Текущая задача";
-            this.TopMost = true;
+            this.Controls.Add(this.textBoxTaskDescription);
+            this.Name = "TaskRecord";
+            this.Text = "Current Task";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -82,9 +82,8 @@ namespace DailyTasksTracking
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBoxTaskText;
+        private System.Windows.Forms.TextBox textBoxTaskDescription;
         private System.Windows.Forms.Button buttonSave;
         private System.Windows.Forms.Button buttonCancel;
     }
 }
-

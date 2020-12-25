@@ -46,22 +46,33 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="DailyReport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs" />
-    <Compile Include="FormDailyReport.cs">
-      <SubType>Form</SubType>
+    <Compile Include="DailyReport.Designer.cs">
+      <DependentUpon>DailyReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormDailyReport.Designer.cs" />
     <Compile Include="FormTimerIntervalSet.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormTimerIntervalSet.Designer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx" />
-    <EmbeddedResource Include="FormDailyReport.resx" />
+    <Compile Include="TaskRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaskRecord.Designer.cs">
+      <DependentUpon>TaskRecord.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DailyReport.aa-ER.resx">
+      <DependentUpon>DailyReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DailyReport.resx">
+      <DependentUpon>DailyReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DailyReport.ru.resx">
+      <DependentUpon>DailyReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormTimerIntervalSet.resx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -72,6 +83,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="TaskRecord.resx">
+      <DependentUpon>TaskRecord.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
